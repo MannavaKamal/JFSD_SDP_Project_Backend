@@ -10,7 +10,7 @@ public class webconfig implements WebMvcConfigurer {
 	    public void addCorsMappings(CorsRegistry registry) {
 	        registry.addMapping("/**")
 	                .allowedOrigins(  "https://jfsd-sdp-project-frontend-react-2zquuwhpf.vercel.app", 
-                    "https://jfsd-sdp-project-frontend-react-git-main-mannavakamals-projects.vercel.app"
+                    "https://jfsd-sdp-project-frontend-react-git-main-mannavakamals-projects.vercel.app",http://localhost:3000
 ) // React frontend URL
 	                .allowedMethods("GET", "POST", "PUT", "DELETE")
 	                .allowCredentials(true); // Allow credentials (for cookies)
