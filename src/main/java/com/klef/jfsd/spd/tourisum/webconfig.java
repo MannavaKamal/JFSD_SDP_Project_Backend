@@ -9,7 +9,7 @@ public class webconfig implements WebMvcConfigurer {
 	 @Override
 	    public void addCorsMappings(CorsRegistry registry) {
 	        registry.addMapping("/**")
-	                .allowedOrigins("*") // React frontend URL
+	                .allowedOrigins("https://jfsd-sdp-project-frontend-react-2zquuwhpf.vercel.app") // React frontend URL
 	                .allowedMethods("GET", "POST", "PUT", "DELETE")
 	                .allowCredentials(true); // Allow credentials (for cookies)
 	    }
