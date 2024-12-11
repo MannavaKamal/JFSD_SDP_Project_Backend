@@ -104,7 +104,7 @@ public class AdminController {
 	 
 	@GetMapping("/checkadminsession")
     public Admin checkadminsession(HttpServletRequest request) {
-	System.out.println("session is at adminsession login"+session.getId());
+	
     	HttpSession session = request.getSession();
     	Admin a1 = (Admin)session.getAttribute("admindetails");
     	if(a1!=null) {
