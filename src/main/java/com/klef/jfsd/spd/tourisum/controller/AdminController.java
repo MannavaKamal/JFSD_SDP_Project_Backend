@@ -94,6 +94,8 @@ public class AdminController {
 					session.removeAttribute("user");
 					session.removeAttribute("hoteladmindetails");
 					session.setAttribute("admindetails", admin);
+				System.out.println("session at admin login"+session.getId());
+				 System.out.println(a1.toString());
 					session.setMaxInactiveInterval(3600);
 					return 0;
 				}
@@ -102,6 +104,7 @@ public class AdminController {
 	 
 	@GetMapping("/checkadminsession")
     public Admin checkadminsession(HttpServletRequest request) {
+	    System.out.println("session at checkadmin login"+session.getId());
     	HttpSession session = request.getSession();
     	Admin a1 = (Admin)session.getAttribute("admindetails");
     	if(a1!=null) {
