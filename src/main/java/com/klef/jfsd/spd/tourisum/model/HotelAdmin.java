@@ -10,7 +10,8 @@ import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 @Entity
 @Table(name="HotelAdmin")
-public class HotelAdmin {
+public class HotelAdmin implements java.io.Serializable{
+	 private static final long serialVersionUID = 1L;
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY) // you can take this manually also through form
 	 @Column(name="id")
