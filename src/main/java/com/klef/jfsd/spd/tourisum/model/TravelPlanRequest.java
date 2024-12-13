@@ -2,7 +2,8 @@ package com.klef.jfsd.spd.tourisum.model;
 
 @jakarta.persistence.Entity
 @jakarta.persistence.Table(name="TravelPlanRequest_Table")
-public class TravelPlanRequest {
+public class TravelPlanRequest implements java.io.Serializable {
+	 private static final long serialVersionUID = 1L;
 
 	@jakarta.persistence.Id
 	@jakarta.persistence.GeneratedValue(strategy=jakarta.persistence.GenerationType.IDENTITY)
