@@ -499,7 +499,8 @@ public class UserController {
 
 
 // to take amount from frontend
-class Pay{
+class Pay implements java.io.Serializable{
+	 private static final long serialVersionUID = 1L;
 	 private int sno;
 	 private int userid;
 	 private String orderid; 
