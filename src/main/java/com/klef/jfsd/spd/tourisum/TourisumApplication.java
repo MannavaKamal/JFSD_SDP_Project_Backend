@@ -6,7 +6,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 
 @SpringBootApplication
 @EnableScheduling
-@EnableRedisHttpSession	
+//@EnableRedisHttpSession	
 public class TourisumApplication {
 
 	public static void main(String[] args) {
