@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-//@EnableRedisHttpSession	
+@EnableRedisHttpSession	
 public class TourisumApplication {
 
 	public static void main(String[] args) {
