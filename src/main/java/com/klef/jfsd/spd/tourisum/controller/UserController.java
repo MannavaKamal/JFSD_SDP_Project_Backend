@@ -3,6 +3,7 @@ package com.klef.jfsd.spd.tourisum.controller;
 
 import java.text.ParseException;
 
+import java.time.ZoneId;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -259,7 +260,7 @@ public class UserController {
 				if(status == 0 ) {
 					paymentdetails details = new paymentdetails();
 					
-		 LocalDateTime now = LocalDateTime.now();
+		 LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Kolkata"));
 	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss a");	        
 	        details.setDate(now.format(formatter));
 	        details.setOrderid(t1.getStartdate());// orderid
@@ -270,7 +271,7 @@ public class UserController {
 		session.removeAttribute("pay");
 		return 1;
 				}
-					 LocalDateTime now = LocalDateTime.now();
+		 LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Kolkata"));
 				        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss a");
 					paymentdetails details = new paymentdetails();
 					  details.setDate(now.format(formatter));
@@ -329,7 +330,7 @@ public class UserController {
 				int status = orderResponse.getString("status").compareTo("paid");
 				if(status == 0 ) {
 					paymentdetails details = new paymentdetails();					
-		 LocalDateTime now = LocalDateTime.now();
+		  LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Kolkata"));
 	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss a");	        
 	        details.setDate(now.format(formatter));
 	        rs.setDate(now.format(formatter));
@@ -341,7 +342,7 @@ public class UserController {
 		session.removeAttribute("pay1");
 		return 1;
 				}
-					 LocalDateTime now = LocalDateTime.now();
+					  LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Kolkata"));
 				        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss a");
 					paymentdetails details = new paymentdetails();
 					  details.setDate(now.format(formatter));
